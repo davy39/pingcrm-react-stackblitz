@@ -1,8 +1,21 @@
 # Ping CRM React
 
+
+This is a fork of [pingcrm-react](https://github.com/liorocks/pingcrm-react) that you can run and develop in your browser, thanks to php-wasm.
+
+---
+
+## 🚀 Start it in your browser !
+
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/davy39/pingcrm-react-stackblitz)
+
+---
+
 A demo application to illustrate how [Inertia.js](https://inertiajs.com/) works with [Laravel](https://laravel.com/) and [React](https://reactjs.org/).
 
 > This is a port of the original [Ping CRM](https://github.com/inertiajs/pingcrm) written in Laravel and Vue.
+
+
 
 ![](https://raw.githubusercontent.com/liorocks/pingcrm-react/master/screenshot.png)
 
