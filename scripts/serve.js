@@ -51,20 +51,13 @@ const PUBLIC_ROOT = path.join(PROJECT_ROOT, 'public');
             for (const [key, value] of Object.entries(result.headers)) {
                 const lowerKey = key.toLowerCase();
 
-                // 1. Ignorer Content-Length (Node le recalcule)
                 if (lowerKey === 'content-length') continue;
-
-                // 2. Cas particulier : Set-Cookie DOIT rester un tableau pour Express
                 if (lowerKey === 'set-cookie') {
                     responseHeaders[key] = value;
                     continue;
                 }
-
-                // 3. Correction du bug : On convertit les tableaux en chaînes pour les autres headers (ex: Content-Type)
                 const stringValue = Array.isArray(value) ? value.join(', ') : value;
                 responseHeaders[key] = stringValue;
-
-                // 4. Détection HTML pour injection Vite
                 if (lowerKey === 'content-type' && stringValue.includes('text/html')) {
                     isHtml = true;
                 }
