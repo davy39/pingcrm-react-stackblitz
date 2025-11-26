@@ -2,8 +2,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "prod": "vite build"
+    "postinstall": "node scripts/setup.js",
+    "dev": "concurrently \"npm run php-server\" \"wait-on tcp:3000 && npm run vite-server\"",
+    "php-server": "node scripts/serve.js",
+    "vite-server": "vite",
+    "artisan": "node scripts/cli.js artisan",
+    "build": "vite build"
   },
   "dependencies": {
     "@inertiajs/react": "^1.0.0",
@@ -31,6 +35,10 @@
     "laravel-vite-plugin": "^1.0.4",
     "postcss": "^8.4.21",
     "typescript": "^5.4.5",
-    "vite": "^5.4.14"
+    "vite": "^5.4.14",
+    "concurrently": "^8.0.0",
+    "express": "^4.18.0",
+    "tar": "^6.1.0",
+    "wait-on": "^7.0.0"
   }
 }

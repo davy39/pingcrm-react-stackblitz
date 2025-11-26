@@ -4,9 +4,9 @@
 /public/build
 /public/storage
 /storage/*.key
-/vendor
+#/vendor  Needed for stackblitz deploy
 .DS_Store
-.env
+# .env
 .env.backup
 .phpunit.result.cache
 .php-cs-fixer.php
