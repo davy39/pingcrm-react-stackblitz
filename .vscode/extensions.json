@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+      "bmewburn.vscode-intelephense-client", // PHP Intellisense
+      "bradlc.vscode-tailwindcss",           // Autocomplétion Tailwind CSS
+      "esbenp.prettier-vscode",              // Formatage automatique du code
+      "dsznajder.es7-react-js-snippets"      // Snippets React (facultatif)
+    ]
+  }

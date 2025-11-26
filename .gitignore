@@ -16,4 +16,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 /.idea
-/.vscode
+#/.vscode   Needed for Extension install in Stackblitz : Intelephense...
