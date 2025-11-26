@@ -6,7 +6,7 @@
     "db:init": "touch database/database.sqlite && node scripts/cli.js artisan migrate:fresh --seed --force",
     "dev": "npm run db:init && concurrently \"npm run php-server\" \"wait-on tcp:3000 && npm run vite-server\"",
     "php-server": "node scripts/serve.js",
-    "vite-server": "vite",
+    "vite-server": "vite --open",
     "artisan": "node scripts/cli.js artisan",
     "build": "vite build"
   },
